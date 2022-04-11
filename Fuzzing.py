@@ -27,7 +27,6 @@ def Banner():
         print(
             f'[bold][italic]{banner}[/] Version 2.0 \t OS: [italic][bold][red]Not Found[/]\n\n')
 
-
 def Wordlist():
     global site
     wordlist = eval(input('[$] Drag the wordlist here: '))
@@ -51,7 +50,6 @@ def Wordlist():
                 print(f'[yellow][*] {site}{i} - {qq.status_code}[/]')
                 time.sleep(1)
 
-
 def Fuzzing():
     Banner()
     global site
@@ -69,4 +67,5 @@ def Fuzzing():
             "[italic][red]Check the url or the imported file.[/]\n"
             "[italic][red]https://' and the forward slash(/) after the '.com' in the url are required.[/]"
         )
+        
 Fuzzing()
