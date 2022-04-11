@@ -8,7 +8,6 @@ import sys
 clear = 'cls' if name == 'nt' else 'clear'
 system(clear)
 
-
 def Banner():
     banner = pg.figlet_format('Fuzzing')
 
@@ -29,7 +28,7 @@ def Banner():
             f'[bold][italic]{banner}[/] Version 2.0 \t OS: [italic][bold][red]Not Found[/]\n\n')
 
 
-def wordlist():
+def Wordlist():
     global site
     wordlist = eval(input('[$] Drag the wordlist here: '))
 
@@ -56,13 +55,14 @@ def wordlist():
 def Fuzzing():
     Banner()
     global site
+    
     site = input('[$] Website: ')
     try:
         if site[-1] == '/':
-            wordlist()
+            Wordlist()
         else:
             site = site + '/'
-            wordlist()
+            Wordlist()
     except:
         system(clear)
         print(
